@@ -23,7 +23,7 @@ python generate_landscape.py # output.png is written in root directory
 
 ## Output Example
 
-![Cyber Program generated](./output.png)
+![Cyber Program generated](./output-sample.png)
 
 ## Disclaimer
 

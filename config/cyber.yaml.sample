@@ -1,0 +1,54 @@
+cyber_program:
+  layers:
+    - id: 1
+      name: On-Premise Datacenter / Server
+      description: "Physical infrastructure hosted locally"
+    - id: 2
+      name: Local / Workstation / Utilisateur
+      description: "within the organization"
+    - id: 3
+      name: Private Cloud / SaaS
+      description: "Dedicated cloud environment for the organization"
+    - id: 4
+      name: Internet / Remote worker
+      description: "Public network used by everybody"
+    - id: 5
+      name: Darkweb / Treat Actor
+      description: "Preferred network to lead illegal activities"
+
+  domains:
+    - name: Identity
+      entries:
+        - layer: 1
+          tools: Tenable.AD, Safe
+          controls: SIEM
+          image: tenable, splunk, beyond
+        - layer: 2
+          tools: Phishing test, Annual Training
+          controls: Access Review
+          image: metacompliance
+        - layer: 3
+          tools: MFA, Entra
+          controls: Login from BAD IP
+          image: entra, splunk
+        - layer: 4
+          tools: Bastion
+          image: beyond
+        - layer: 5
+          tools: DigitalShadow
+          controls: PasswordLeak
+          image: digital-shadows
+
+    - name: Appplications
+      entries:
+        - layer: 1
+          tools: MFA, SSO
+          controls: designAutority
+          image: sonar
+        - layer: 3
+          tools: Tenable.Cloud
+          image: tenable
+        - layer: 4
+          tools: WAF
+          image: radware
+  

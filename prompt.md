@@ -1,0 +1,14 @@
+Compute a program that : 
+- take into input a YAML file
+- outout an landscape image that fit the page in 1080p
+- the image should represent infos contained into YAML file
+    - yaml will be divided into multidimension tree
+    - each tree will represent a domain identified by a name that will be used as a legend and a color
+    - the color will vary in intensitivity for each case based on the number of entry (more entry, more intense color)
+    - for each case the yaml should allow to list tools and controls in place that will be draw as text in the case
+    - in case a picture file exist for a listed tool or control in a folder img, the corresponding image will be used and scaled to fit alongside the texte in the case, transparency should be preserved
+- program should considerer putting text into case with no overlap
+- yaml will describe a cyber program ideally segmented by aera of concerns (domain) like identity, devices, cloud, etc...
+- if we can also match against NIST it will be great
+- the image should inspire from table elements, the bottom line will be on premise datacenter, upper one local network, upper one private cloud, then vpn, internet and darkweb
+- colum will represent a domain
